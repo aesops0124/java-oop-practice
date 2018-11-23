@@ -6,9 +6,9 @@ public class Android extends Mobile{
 
     public void makeACall (String inputMessage) {
 
-        if (inputMessage.length() <= 9)
+        if (inputMessage.length() <= 20)
             System.out.println("<Android>Message : " + inputMessage);
         else
-            System.out.println("<Android>Message cannot be sent)");
+            System.out.println("<Android>Message cannot be sent");
     }
 }

@@ -5,11 +5,29 @@ public class App {
     public static void main(String[] args) {
 
         Mobile mobile = new Mobile ("mobilename", "black", "mobilebrand");
-        mobile.makeACall("123");
-        Mobile iphone = new iPhone ("iphonename", "white", "iphone");
-        iphone.makeACall("234");
-        Mobile android = new Android ("androidname", "blue", "android");
-        android.makeACall("345");
+        mobile.makeACall("Sent by mobile");
+        mobile.getBasicInformation();
 
+        Mobile iphone = new iPhone ("iphonename", "white", "iphone");
+        iphone.makeACall("Sent by iPhone");
+        Mobile android = new Android ("androidname", "blue", "android");
+        android.makeACall("Sent by Android");
+
+        Person tommy = new Person ("Tommy", iphone);
+        tommy.makeACall("Sent by iPhone");
+        Person timmy = new Person ("Timmy", android);
+        timmy.makeACall("Sent by Android");
+        iphone.makeACall("Sent by iPhone, Sent by iPhone, Sent by iPhone");
+        android.makeACall("Sent by Android, Sent by Android, Sent by Android");
+
+        iPhone newiphone = new iPhone ("newiphonename", "black", "iphone");
+
+        iPhoneRobot iprobot = new iPhoneRobot ("iprobot", newiphone);
+        iprobot.makeACall("Sent by New iPhone");
+
+        tommy.setMobile(android);
+        tommy.makeACall("Sent by Android");
+        timmy.setMobile(iphone);
+        timmy.makeACall("Sent by iPhone");
     }
 }

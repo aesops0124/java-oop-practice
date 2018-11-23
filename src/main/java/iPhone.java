@@ -4,9 +4,9 @@ public class iPhone extends Mobile{
     }
 
     public void makeACall (String inputMessage) {
-        if (inputMessage.length() <= 10)
+        if (inputMessage.length() <= 20)
             System.out.println("<iPhone>Message : " + inputMessage);
         else
-            System.out.println("<iPhone>Message cannot be sent)");
+            System.out.println("<iPhone>Message cannot be sent");
     }
 }
